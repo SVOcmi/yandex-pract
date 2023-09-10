@@ -1,0 +1,56 @@
+.picture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.pic-game {
+  width: 90%;
+  border-radius: 20px;
+  object-fit: contain;
+}
+
+.text__task{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.body-task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container_task {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.3rem;
+  color:rgba(255, 255, 255, 0.80);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.4px;
+  padding:0 20px;
+}
+
+.description > span {
+  color: #FF5C00;
+  font-weight: 600
+}
+
+@media screen and (max-width: 600px) {
+  .pic-game {
+    width: 90%;
+  }
+  
+}
