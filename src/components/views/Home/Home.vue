@@ -3,20 +3,16 @@
     <div class="about_me">
       <div class="card__body">
         <template>
-          <!-- <swiper-container :pagination="true">
-            <swiper-slide>
-              <div class="block__sl">
-                <span>Последнее селфи</span>
-                <img class="img-sl" src="../../../assets/image/photo.jpg"/>
-              </div>
-            </swiper-slide>
-            <swiper-slide>
-              <div class="block__sl">
-                <span>Старшая школа</span>
-                <img class="img-sl" src="../../../assets/image/photo2.jpg"/>
-              </div>
-            </swiper-slide>
-          </swiper-container> -->
+          <VueSlickCarousel :arrows="true" :dots="true">
+            <div class="block__sl">
+              <span>Последнее селфи</span>
+              <img class="img-sl" src="../../../assets/image/photo.jpg"/>
+            </div>
+            <div class="block__sl">
+              <span>Старшая школа</span>
+              <img class="img-sl" src="../../../assets/image/photo2.jpg"/>
+            </div>
+          </VueSlickCarousel>
         </template>
       </div>
       <div class="text__his-link">
@@ -40,11 +36,149 @@
     <div class="video__fun-its-css">
         <h1 class="title">Фишка CSS</h1>
       <div>
-        <!-- <youtube player-width="auto" player-height="auto" video-id="J821P2z-K2w"></youtube> -->
+        <youtube player-width="auto" player-height="auto" video-id="J821P2z-K2w"></youtube>
       </div>
     </div>
   </div>
 </template>
 
-<script src="./Home.js"></script>
-<script src="./Home.css" lang="css"></script>
+<script>
+  import VueSlickCarousel from 'vue-slick-carousel'
+  import 'vue-slick-carousel/dist/vue-slick-carousel.css'
+  import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
+
+  export default {
+    name: 'MyComponent',
+    components: { VueSlickCarousel },
+  }
+</script>
+
+<style>
+.body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.about_me {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card__body {
+  width: 20rem;
+  height: 28rem;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 20px;
+}
+
+.text__his-link {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.history {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.3rem;
+  color:rgba(255, 255, 255, 0.80);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.4px;
+}
+
+.link-git {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  border-radius: 20px;
+  color: rgba(255, 255, 255, 0.80);
+  height: 40px;
+}
+
+.link-git > a {
+  padding: 0 10px;
+}
+
+
+.link-git:hover {
+  border: 1px solid #FF5C00;
+  color: #FF5C00;
+  cursor: pointer;
+}
+
+.carousel-cell {
+  width: 400px;
+  height: 160px;
+  margin-right: 10px;
+}
+
+.video__fun-its-css {
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.title {
+  color: rgba(255, 255, 255, 0.80);
+  text-align: center;
+}
+
+.block__sl {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  padding: 11px 0;
+  gap: 5px;
+}
+
+.block__sl > span{
+  color: rgba(255, 255, 255, 0.80);
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.3rem;
+  color:rgba(255, 255, 255, 0.80);
+}
+
+.img-sl {
+  width: 90%;
+  border-radius: 10px;
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+@media screen and (max-width: 600px) {
+  .about_me {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text__his-link{
+    width: 90%;
+    gap: 30px;
+  }
+  
+  .history {
+    font-size: 1.2rem;
+    text-align: justify;
+  }
+}
+</style>

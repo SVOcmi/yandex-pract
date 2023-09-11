@@ -17,9 +17,6 @@
   </div>
 </template>
 
-<script>
-</script>
-
 <style>
   nav {
     padding: 0 50px;
