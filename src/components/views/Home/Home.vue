@@ -3,7 +3,7 @@
     <div class="about_me">
       <div class="card__body">
         <template>
-          <swiper-container :pagination="true">
+          <!-- <swiper-container :pagination="true">
             <swiper-slide>
               <div class="block__sl">
                 <span>Последнее селфи</span>
@@ -16,7 +16,7 @@
                 <img class="img-sl" src="../../../assets/image/photo2.jpg"/>
               </div>
             </swiper-slide>
-          </swiper-container>
+          </swiper-container> -->
         </template>
       </div>
       <div class="text__his-link">
@@ -40,11 +40,11 @@
     <div class="video__fun-its-css">
         <h1 class="title">Фишка CSS</h1>
       <div>
-        <youtube player-width="auto" player-height="auto" video-id="J821P2z-K2w"></youtube>
+        <!-- <youtube player-width="auto" player-height="auto" video-id="J821P2z-K2w"></youtube> -->
       </div>
     </div>
   </div>
 </template>
 
 <script src="./Home.js"></script>
-<script src="./Home.css"></script>
+<script src="./Home.css" lang="css"></script>

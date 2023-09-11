@@ -34,4 +34,4 @@
 </template>
 
 <script src="./Task.js"></script>
-<script src="./Task.css"></script>
+<script src="./Task.css" lang="css"></script>
