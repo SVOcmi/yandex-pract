@@ -3,7 +3,7 @@
     <div class="about_me">
       <div class="card__body">
         <template>
-          <swiper-container :pagination="true" :modules="modules">
+          <swiper-container :pagination="true">
             <swiper-slide>
               <div class="block__sl">
                 <span>Последнее селфи</span>
